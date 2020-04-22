@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+ 
+<html>
+<head>
+    <title>Library - Admin Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    
+</head>
+<body>
+ 
+<div class="container" ng-app="LibraryManagement">
+ 
+  <h3 style="color:blue">Library - Admin Page</h3>
+  
+  <div ng-controller="LibraryController">
+    <form class="form-horizontal" name="libraryForm" ng-submit="submitForm()">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="libraryNameID">LibraryName:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" name="libraryname" id="libraryNameID"
+            placeholder="Enter LibraryName" ng-model="libraryName"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+    </form>
+ 
+    <div class="col-sm-offset-2 col-sm-10">
+      <p>{{postResultMessage}}</p>
+    </div>
+  </div>
+  
+  <div class="col-sm-offset-2 col-sm-10" ng-controller="getcontroller">
+    <button id="btn-id" type="button" class="btn btn-primary" ng-click="getfunction()">Get All Libraries</button>
+    <ul>
+          <li ng-repeat="libraryNameList in response">{{libraryNameList.libraryName}}</li>
+      </ul>      
+  </div>
+  <div data-ng-init="getLibraryDataFromServer()" ng-controller="populateLibrary">
+					<b>Select Library:</b> <select id="libraryModel" ng-change="getBooksByLibrary()" ng-model="libraryselected">
+						<option value="">-- Select Library --</option>
+						<option data-ng-repeat="libraryModel in libraryNameList" value="{{libraryModel.libraryId}}">{{libraryModel.libraryName}}</option>
+					</select><br>
+				</div>				
+				
+</div>
+
+</body>
+</html>

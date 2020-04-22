@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="213" started-at="2020-04-21T05:31:00Z" finished-at="2020-04-21T05:31:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="213" started-at="2020-04-21T05:31:00Z" finished-at="2020-04-21T05:31:00Z">
+      <class name="BookServiceImplTest">
+        <test-method status="PASS" signature="getAllBooksTestCaseOne()[pri:0, instance:BookServiceImplTest@56ac3a89]" name="getAllBooksTestCaseOne" duration-ms="115" started-at="2020-04-21T11:01:00Z" finished-at="2020-04-21T11:01:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllBooksTestCaseOne -->
+        <test-method status="PASS" signature="getAllBooksTestCaseThree()[pri:0, instance:BookServiceImplTest@56ac3a89]" name="getAllBooksTestCaseThree" duration-ms="11" started-at="2020-04-21T11:01:00Z" finished-at="2020-04-21T11:01:00Z">
+          <exception class="java.lang.Exception">
+            <full-stacktrace>
+              <![CDATA[java.lang.Exception
+	at com.kishan.example.service.BookService.getAllBooks(BookService.java:25)
+	at BookServiceImplTest.getAllBooksTestCaseThree(BookServiceImplTest.java:62)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Exception -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllBooksTestCaseThree -->
+        <test-method status="PASS" signature="getAllBooksTestCaseTwo()[pri:0, instance:BookServiceImplTest@56ac3a89]" name="getAllBooksTestCaseTwo" duration-ms="7" started-at="2020-04-21T11:01:00Z" finished-at="2020-04-21T11:01:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllBooksTestCaseTwo -->
+        <test-method status="PASS" signature="saveBookTestCaseOne()[pri:0, instance:BookServiceImplTest@56ac3a89]" name="saveBookTestCaseOne" duration-ms="25" started-at="2020-04-21T11:01:00Z" finished-at="2020-04-21T11:01:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveBookTestCaseOne -->
+        <test-method status="PASS" signature="saveBookTestCaseTwo()[pri:0, instance:BookServiceImplTest@56ac3a89]" name="saveBookTestCaseTwo" duration-ms="7" started-at="2020-04-21T11:01:00Z" finished-at="2020-04-21T11:01:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveBookTestCaseTwo -->
+      </class> <!-- BookServiceImplTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
